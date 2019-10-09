@@ -1,3 +1,4 @@
+  
 // Update with your config settings.
 
 module.exports = {
@@ -5,8 +6,10 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './dev.sqlite3'
-    }
+      filename: './data/cars.db3'
+    },
+    // SQLite3 requires this
+    useNullAsDefault: true
   },
 
   staging: {
@@ -26,6 +29,7 @@ module.exports = {
   },
 
   production: {
+    // Change driver to pg
     client: 'pg',
     connection: {
       database: 'my_db',
